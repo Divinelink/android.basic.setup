@@ -5,10 +5,11 @@ plugins {
 }
 
 apply {
-    '../tools/detekt-checks.gradle'
-    '../tools/git-hooks.gradle'
-    '../tools/kover.gradle'
+    from '../tools/detekt-checks.gradle'
+    from '../tools/git-hooks.gradle'
+//    from '../tools/kover.gradle'
 }
+
 android {
     compileSdk 30
 
