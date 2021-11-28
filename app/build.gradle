@@ -4,12 +4,11 @@ plugins {
     id 'io.gitlab.arturbosch.detekt'
 }
 
-detekt {
-    toolVersion = "1.19.0-RC2"
-    config = files("config/detekt/detekt.yml")
-    buildUponDefaultConfig = true
+apply {
+    '../tools/detekt-checks.gradle'
+    '../tools/git-hooks.gradle'
+    '../tools/kover.gradle'
 }
-
 android {
     compileSdk 30
 
