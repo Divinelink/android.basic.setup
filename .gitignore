@@ -26,6 +26,9 @@
 bin/
 gen/
 
+*.bin
+*.lock
+
 # Local configuration file (sdk path, etc)
 local.properties
 
@@ -52,6 +55,7 @@ build/*
 
 # Added by DSQ to default gitginore by GitHub
 .gradle/
+.gradle/*
 
 # iOS git ignore
 
