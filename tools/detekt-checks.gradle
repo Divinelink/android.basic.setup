@@ -53,7 +53,6 @@ task detektFormat(type: JavaExec, group: "verification") {
 private String getDiffedFilesFromBranch() {
     def outputStream = new ByteArrayOutputStream()
     def cmd = "path=\$(git rev-parse --show-toplevel) && git diff --diff-filter=d --name-only @{upstream} --relative | sed \"s,^,\$path/,\" | grep '\\.kt\\?\$'"
-    println(cmd)
     execute(cmd, outputStream)
 
     if (outputStream.toString().isEmpty()) {
